@@ -1,0 +1,13 @@
+name: test caller workflow
+
+on:
+  push:
+    branches: main
+
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: radnov/gh-workflows/.github/workflows/test.yaml@main
+    with:
+      run-test-job: false
